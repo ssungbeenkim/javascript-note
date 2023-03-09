@@ -38,13 +38,13 @@ function sum(a, b) {
 sum(1, 2);
 
 const add = (a, b) => {
-  console.log(arguments); // arrow 함수 외부의 arguments를 참조만 함
+  console.log(arguments); // arrow 함수 외부의 arguments를 참조만 함 들어온 인자가 아님.
 };
 add(1, 2);
 
 const printArrow = () => {
   console.log(this);
 };
-printArrow();
+printArrow(); //{}
 cat.printArrow = printArrow;
-cat.printArrow();
+cat.printArrow(); // {}
