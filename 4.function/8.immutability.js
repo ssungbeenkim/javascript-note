@@ -21,3 +21,7 @@ console.log(ellie);
 function changeName(obj) {
   return { ...obj, name: 'Bob' };
 }
+// Note that Object.assign() can be used to mutate an object, whereas spread syntax can't.
+const obj1 = { foo: 'bar', x: 42 };
+Object.assign(obj1, { x: 1337 });
+console.log(obj1); // { foo: "bar", x: 1337 }
