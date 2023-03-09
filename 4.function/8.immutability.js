@@ -16,11 +16,14 @@ function displayObj(obj) {
 }
 const ellie = { name: 'Ellie' };
 displayObj(ellie);
-console.log(ellie);
+console.log(ellie); // { name: 'Bob' } => Destructive
 
 function changeName(obj) {
-  return { ...obj, name: 'Bob' };
+  return { ...obj, name: 'Boby' };
 }
+
+console.log(changeName(ellie)); // { name: 'Boby' }
+console.log(ellie); // { name: 'Bob' }
 // Note that Object.assign() can be used to mutate an object, whereas spread syntax can't.
 const obj1 = { foo: 'bar', x: 42 };
 Object.assign(obj1, { x: 1337 });
