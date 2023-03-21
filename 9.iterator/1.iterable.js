@@ -24,7 +24,14 @@ console.log(ite.next()); //{ value: 1, done: false }
 console.log(ite.next()); //{ value: 2, done: false }
 console.log(ite.next()); //{ value: 3, done: false }
 console.log(ite.next()); //{ value: undefined, done: true }
+console.log(typeof ite); // object
 const iterator = array.values();
+
+/* 
+이터러블한 객체는 심볼이터레이터 함수 호출시 이터러블 프로토콜을 따르는 객체를 리턴한다. 
+그리고 그 객체 내부에는 next() 로 값을 순환하는 함수가 있다. 
+next를 호출하면 Iterator Result 객체를 리턴하고 그 객체 안에는 value, done이라는 프로퍼티가 있다. 
+*/
 
 while (true) {
   // for of 는 아마도 내부적으로 이런식으로 구현되어 있을 것이다.
