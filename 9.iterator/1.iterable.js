@@ -4,17 +4,33 @@
 // 순회 가능한 객체다! 라는것을 의미한다
 // 순회가 가능하면 무엇을 할 수 있나?
 // 바로! 빙글 빙글 도는 반복문, 연산자들을 사용할 수 있어.
+const iteratorFn = Array.prototype[Symbol.iterator];
+console.log(iteratorFn); //[Function: values]
+
+const iteratorobj = Array.prototype[Symbol.iterator]();
+console.log(iteratorobj); //Object [Array Iterator] {}
+
 const array = [1, 2, 3];
 console.log(array.values());
 console.log(array.entries());
 console.log(array.keys());
 
 // iterator 사용해 보기!
+
+const arr = [1, 2, 3];
+const ite = arr[Symbol.iterator]();
+
+console.log(ite.next()); //{ value: 1, done: false }
+console.log(ite.next()); //{ value: 2, done: false }
+console.log(ite.next()); //{ value: 3, done: false }
+console.log(ite.next()); //{ value: undefined, done: true }
 const iterator = array.values();
+
 while (true) {
+  // for of 는 아마도 내부적으로 이런식으로 구현되어 있을 것이다.
   const item = iterator.next();
   if (item.done) break;
-  console.log(item.value);
+  console.log(item.value); // 1 2 3
 }
 
 for (let item of array) {

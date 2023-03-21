@@ -1,5 +1,6 @@
 // [Symbol.iterator](): IterableIterator<T>;
 // 0부터 10이하까지 숫자의 2배를 순회하는 이터레이터(반복자) 만들기!
+// 재사용 가능한 함수를 만들어보기
 function makeIterable(initialValue, maxValue, callback) {
   return {
     [Symbol.iterator]: () => {
