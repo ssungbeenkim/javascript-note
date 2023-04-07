@@ -14,7 +14,6 @@
 // 제너레이터 함수는 사용자에게 제어권을 양도한다.
 
 function* multipleGenerator() {
-  //
   try {
     for (let i = 0; i < 10; i++) {
       console.log(i);

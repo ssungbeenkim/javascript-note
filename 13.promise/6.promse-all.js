@@ -30,14 +30,17 @@ getBanana() //
 Promise.all([getBanana(), getApple()]) //
   .then((fruits) => console.log('all', fruits));
 
-// Promise.race 주어진 Promise중에 제일 빨리 수행된것이 이김!
+// Promise.race 주어진 Promise중에 제일 빨리 수행된것만 반환한다.
 Promise.race([getBanana(), getApple()]) //
   .then((fruit) => console.log('race', fruit));
 
-Promise.all([getBanana(), getApple(), getOrange()]) //
-  .then((fruits) => console.log('all-error', fruits))
-  .catch(console.log);
+// 에러가 발생하는 것을 함께 all 로 묶어서 실행하면 unhandled promise rejection 출력이 되고,
+// then이 호출되지 않는다.
+Promise.all([getBanana(), getApple(), getOrange()])
+  .then((fruits) => console.log('all-error', fruits)) // 출력되지 않음.
+  .catch(console.log); // 에러 캐치는 출력이 되지만 3가지 모두 resolve가 아니면 then은 출력되지 않는다.
 
+// 성공하든 실패하든 모든 결과를 배열로 묶어서 리턴해 준다.
 Promise.allSettled([getBanana(), getApple(), getOrange()]) //
   .then((fruits) => console.log('all-settle', fruits))
   .catch(console.log);
