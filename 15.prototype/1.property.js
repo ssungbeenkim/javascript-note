@@ -50,7 +50,7 @@ console.log(Object.values(dog));
 console.log(Object.entries(dog)); // key와 value를 pair로 받아온다.
 
 console.log('name' in dog); // in 연산자로 특정 key가 있는지 확인.
-console.log(dog.hasOwnProperty('name'));
+console.log(dog.hasOwnProperty('name')); // in 연산자와 동일
 
 // 오브젝트의 각각의 프로퍼티는 프로퍼티 디스크립터라고 하는 객체로 저장됨
 const descriptors = Object.getOwnPropertyDescriptors(dog);
@@ -66,8 +66,8 @@ enumerable - 값을 열거(iterate) 할 수 있는지
 configurable - key를 삭제하는 등 업데이트 할 수 있는지 
 */
 
-const desc = Object.getOwnPropertyDescriptor(dog, 'name'); // 하나의 프로퍼티에 대해서만 받아옴.
-console.log(desc);
+const descriptor = Object.getOwnPropertyDescriptor(dog, 'name'); // 하나의 프로퍼티에 대해서만 받아옴.
+console.log(descriptor);
 
 Object.defineProperty(dog, 'name', {
   // propery descriptor 수정이 가능.
@@ -81,7 +81,7 @@ console.log(dog.name); // 멍멍
 console.log(Object.keys(dog)); // [ 'emoji' ]
 //열거 불가능하기 때문에 values, entries에도 포함되지 않는다.
 delete dog.name; // 삭제가 불가능
-console.log(dog.name); // 멍멍
+console.log(dog.name);
 
 const student = {};
 Object.defineProperties(student, {
