@@ -2,7 +2,6 @@
 프로토타입을 활용해서 상속을 구현해보자. 
 브라우저에서 상속관계를 확인해보며 진행해보도록 하자. */
 
-// 프로토타입을 베이스로한 객체지향 프로그래밍에 대해 알아보자.
 function Animal(name, emoji) {
   this.name = name;
   this.emoji = emoji;

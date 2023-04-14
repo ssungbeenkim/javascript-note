@@ -13,7 +13,7 @@ function Dog(name, emoji) {
   /* this.printName = () => {
     console.log(`${this.name} ${this.emoji}`);
   }; */
-  // 만들어진 instance마다 이 함수를 동일하게 가지고 있게 된다. 메모리가 낭비될 수 있음.
+  // 생성자 함수로 만들어진 instance마다 이 함수를 동일하게 가지고 있게 된다. 메모리가 낭비될 수 있음.
 }
 // const dog1 = new Dog('뭉치', '🐶');
 // const dog2 = new Dog('코코', '🐩');

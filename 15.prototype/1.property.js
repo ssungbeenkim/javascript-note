@@ -9,7 +9,7 @@
 /* 프로토타입 눈으로 확인하기 */
 
 const obj1 = {};
-// obj1. 점을 찍는 순간 hasOwnProperty toSteing..등의 함수와 속성들을 볼 수 있다.
+// obj1. 점을 찍는 순간 hasOwnProperty toString..등의 함수와 속성들을 볼 수 있다.
 console.log(obj1); //{}
 /* 
 브라우저 콘솔에서 출력해 보면, obj1에 별도의 상태나 함수는 없지만 Object라는 프로토타입을 가지고 있으며
