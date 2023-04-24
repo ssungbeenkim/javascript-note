@@ -46,11 +46,11 @@ while (true) {
 }
 
 for (let item of array) {
-  console.log(item);
+  console.log(item); // 1 2 3
 }
 
 for (let item of array.values()) {
-  console.log(item);
+  console.log(item); // 1 2 3
 }
 
 const obj = { id: 123, name: 'Vincent' };
