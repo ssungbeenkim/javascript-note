@@ -11,6 +11,9 @@
 // };
 
 /* 제너레이터 https://ko.javascript.info/generators */
+/* 도움이 되는 글 
+  
+ */
 // 제너레이터 함수는 사용자에게 제어권을 양도한다.
 
 function* multipleGenerator() {
