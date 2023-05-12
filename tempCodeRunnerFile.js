@@ -1,0 +1,1 @@
+new Error('seconds가 0보다 작음')

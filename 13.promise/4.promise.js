@@ -11,7 +11,7 @@ function runInDelay(seconds) {
   return new Promise((resolve, reject) => {
     /* resolve는 then을 호출할 때, reject는 catch에서 사용할 콜백이다. */
     if (!seconds || seconds < 0) {
-      reject(new Error('seconds가 0보다 작음'));
+      reject(new Error('seconds가 0보다 작음')); // reject를 할 때는 error 객체를 전달해야 한다.
     }
     setTimeout(resolve, seconds * 1000);
   });
