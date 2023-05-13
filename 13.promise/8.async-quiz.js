@@ -11,6 +11,13 @@ function getChicken() {
   //return Promise.resolve(`🪴 => 🐓`);
 }
 
+// function makeFriedEgg() {
+//   return getChicken() // return 해주지 않으면 Void 리턴
+//     .catch(() => '🐔')
+//     .then(fetchEgg)
+//     .then(fryEgg);
+// } //async 함수로 만들어보자.
+
 async function makeFriedEgg() {
   let chicken;
   try {
