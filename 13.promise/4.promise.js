@@ -5,6 +5,8 @@
 )실행할 일을 각각 등록해 줄 수 있다. 
 */
 
+/* unhandled promise rejection은 안나올 수 있음 */
+
 /* 참고로 프로미스의 then은 Micro task queue로 간다.  */
 
 function runInDelay(seconds) {
@@ -17,7 +19,7 @@ function runInDelay(seconds) {
   });
 }
 
-runInDelay(2) // 함수를 호출하면 즉각적으로 프로미스 객체를 리턴한다.
+runInDelay(0) // 함수를 호출하면 즉각적으로 프로미스 객체를 리턴한다.
   .then(() => console.log('타이머 완료!')) // 프로미스 객체를 통해 성공, 실패를 알려주고, 그에 따른 콜백을 수행.
   .catch(console.error) // catch 해주지 않으면 에러는 아니지만 warning이 출력된다. unhandled promise rejection!
   .finally(() => console.log('끝났다!'));

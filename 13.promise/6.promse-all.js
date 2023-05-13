@@ -18,7 +18,7 @@ function getOrange() {
   return Promise.reject(new Error('no orange'));
 }
 
-// 바나나과 사과를 같이 가지고 오기
+// 바나나와 사과를 같이 가지고 오기
 getBanana() //
   .then((banana) =>
     getApple() //
@@ -44,3 +44,9 @@ Promise.all([getBanana(), getApple(), getOrange()])
 Promise.allSettled([getBanana(), getApple(), getOrange()]) //
   .then((fruits) => console.log('all-settle', fruits))
   .catch(console.log);
+/* all-settle [
+  { status: 'fulfilled', value: '🍌' },
+  { status: 'fulfilled', value: '🍎' },
+  {
+    status: 'rejected',
+    reason: Error: no orange */
