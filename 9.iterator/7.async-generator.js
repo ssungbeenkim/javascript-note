@@ -33,4 +33,4 @@ let range = {
   }
 })();
 
-// 더 정리할 부분 : pagenation 관련하여 사용하는 예제
+// async generator를 활용해 pagenation을 구현할 수 있다.
