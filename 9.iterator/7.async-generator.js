@@ -34,3 +34,4 @@ let range = {
 })();
 
 // async generator를 활용해 pagenation을 구현할 수 있다.
+// https://ko.javascript.info/async-iterators-generators#ref-427
