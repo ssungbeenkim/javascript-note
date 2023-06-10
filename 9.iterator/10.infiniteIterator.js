@@ -27,3 +27,11 @@ const take = (n) =>
       i++;
     }
   };
+
+function* genNat() {
+  for (let i = 0; true; i++) yield i;
+}
+
+for (let x of genNat()) {
+  console.log(x);
+}
