@@ -10,10 +10,7 @@
 //   },
 // };
 
-/* 제너레이터 https://ko.javascript.info/generators */
-/* 도움이 되는 글 
-  
- */
+/* 제너레이터 기본 https://ko.javascript.info/generators */
 // 제너레이터 함수는 사용자에게 제어권을 양도한다.
 
 function* multipleGenerator() {
@@ -37,7 +34,7 @@ console.log(next); // { value: 1, done: false }
 // 제너레이터를 이용하면 비동기적인 함수를 만들 수 있으나, 프로미스를 사용하는 것이 훨씬 코드도 깔끔하고 간편하다.
 
 // generator 함수 개념 정리
-/* 더 많은 예제는 https://ko.javascript.info/generators 참고
+/* 더 많은 예제는 https://ko.javascript.info/generators
 제너레이터 컴포지션 
 제너레이터 정보 교환 등
 
