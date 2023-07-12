@@ -1,8 +1,8 @@
-function a() {
-  return () => {
-    console.log('a');
-  };
-}
+const a = 1;
 
-b = a();
-b();
+switch (a) {
+  case 1:
+    console.log('a is 1');
+  case 2:
+    console.log('a is 2');
+}

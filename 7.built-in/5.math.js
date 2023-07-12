@@ -15,6 +15,8 @@ console.log(Math.round(1.4));
 console.log(Math.round(1.7));
 // 정수만 반환
 console.log(Math.trunc(1.5432));
+//
+console.log(Math.toFixed(1.2233));
 
 // 최대, 최소값을 찾기
 console.log(Math.max(1, 3, 4));

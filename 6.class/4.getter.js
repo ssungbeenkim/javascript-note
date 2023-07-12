@@ -18,3 +18,4 @@ student.firstName = '안나';
 console.log(student.firstName);
 console.log(student.fullName);
 student.fullName = '김철수';
+console.log(student.fullName);
