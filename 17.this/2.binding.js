@@ -20,16 +20,16 @@ function Dog(name) {
 
 const cat = new Cat('냐옹');
 const dog = new Dog('멍멍');
-cat.printName();
-dog.printName();
+cat.printName(); // 냐옹
+dog.printName(); // 멍멍
 
 dog.printName = cat.printName;
-dog.printName();
-cat.printName();
+dog.printName(); // *멍멍 this는 호출하는 사람(caller)에 의해 동적으로 결정됨!
+cat.printName(); // 냐옹
 
 function printOnMonitor(printName) {
   console.log('모니터를 준비하고!, 전달된 콜백을 실행!');
   printName();
 }
 
-printOnMonitor(cat.printName);
+printOnMonitor(cat.printName); // undefined. this는 글로벌 객체인데, 글로벌 객체에는 name이 없음

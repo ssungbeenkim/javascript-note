@@ -1,8 +1,5 @@
-const a = 1;
-
-switch (a) {
-  case 1:
-    console.log('a is 1');
-  case 2:
-    console.log('a is 2');
-}
+const arr = [1, 2, 3, 4, 5];
+console.log(arr.length);
+arr.length = 2;
+console.log(arr.length);
+arr.forEach(console.log);
