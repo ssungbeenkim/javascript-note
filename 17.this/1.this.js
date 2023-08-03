@@ -37,6 +37,7 @@ cat1.printName(); // 냐옹
 cat2.printName(); // 미야옹
 
 {
+  // 연습
   ('use strict');
 
   class Cl {
