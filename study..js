@@ -1,8 +1,6 @@
-const obj = { a: 'a', b: 'b', c: 'c' };
-
-function printAll(obj) {
-  const { a, b, c } = obj;
-  console.log(a, b, c);
-}
-
-printAll(obj);
+const now = new Date();
+now.setFullYear(2023); // 인스턴스 메서드
+now.setMonth(0); // 0: 1
+console.log(now.getFullYear()); // 2023
+console.log(now.getDate()); //
+console.log(now.getMonth()); //

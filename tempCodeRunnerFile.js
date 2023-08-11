@@ -1,4 +1,10 @@
-
-// Promise.all 병렬적으로 한번에 모든 Promise들을 실행!
-Promise.all([getBanana(), getApple()]) //
-  .then((fruits) => console.log('all', fruits));
+const a = '2023-01-01';
+const b = '2023-01-02';
+const c = '2023-01-03';
+const arrd = [a, b, c];
+const arr = [1, 3, 2, 4];
+console.log(arr.sort((a, b) => a - b));
+console.log(arrd.sort((a, b) => a - b));
+console.log(arr);
+console.log(arrd);
+console.log(a > b);
