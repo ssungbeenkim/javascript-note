@@ -19,10 +19,9 @@ const increase = makeCounter();
 increase();
 increase();
 increase();
-
-/* 
-클로저라는 특징을 활용해서 함수를 활용해 은닉하고자 하는 정보를 감추고 오직 퍼블릭 함수를 통해서만 
+/* 클로저라는 특징을 활용해서 함수를 활용해 은닉하고자 하는 정보를 감추고 오직 퍼블릭 함수를 통해서만 
 내부 데이터를 조작할 수 있게 했다.  */
+
 {
   // mdn에 있는 좋은 예제.
   const counter = (function () {
@@ -30,17 +29,14 @@ increase();
     function changeBy(val) {
       privateCounter += val;
     }
-
     // 외부에서는 이 세가지 함수만을 이용해서 내부 데이터를 조작할 수 있다.
     return {
       increment() {
         changeBy(1);
       },
-
       decrement() {
         changeBy(-1);
       },
-
       value() {
         return privateCounter;
       },
@@ -57,9 +53,7 @@ increase();
   console.log(counter.value()); // 1.
 }
 
-/* 
-하지만 더이상 이렇게 정보를 은닉할 필요는 없다. 이제 클래스를 사용하면 된다. 
-*/
+// 하지만 더이상 이렇게 정보를 은닉할 필요는 없다. 이제 클래스를 사용하면 된다.
 
 class Counter {
   #count = 0;
