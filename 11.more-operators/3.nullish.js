@@ -5,3 +5,7 @@
 let num = 0;
 console.log(num || '-1');
 console.log(num ?? '-1');
+
+console.log(0 || "''");
+console.log(0 ?? "''");
+console.log(null ?? 'it was null so me :D');

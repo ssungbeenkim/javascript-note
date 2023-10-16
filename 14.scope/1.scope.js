@@ -12,7 +12,7 @@
 {
   const a = 'a';
 }
-console.log(a); // app crushed
+// console.log(a); // app crushed
 const b = 'b';
 
 // 함수 외부에서는 함수 내부의 변수를 참조할 수 없다.
@@ -20,10 +20,10 @@ function print() {
   const message = 'Hello World';
   console.log(message);
 }
-console.log(message);
+// console.log(message); // app crushed
 
 // 함수 외부에서는 함수의 매개변수를 참조할 수 없다.
 function sum(a, b) {
   console.log(a, b);
 }
-console.log(a, b);
+// console.log(a, b); // app crushed

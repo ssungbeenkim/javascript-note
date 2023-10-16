@@ -29,7 +29,7 @@ class Cat {}
 
 //?
 let x = 1;
-{
+{ 
   console.log(x); //* Error! 블럭 안에서 변수 x의 선언이 호이스팅 되고, 값을 할당하기 전이므로 에러가 발생하다.
   let x = 2;
 }
